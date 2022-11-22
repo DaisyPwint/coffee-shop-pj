@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@500;700&display=swap");
+
+
+/* ----- Basic Setup ----- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f2f2f2;  
+}
+body,.btn{
+    font-family: "Montserrat", sans-serif;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  background-color: #fff;
+  row-gap: 10px;
+}
+
+/* ----- Heading ----- */
+
+h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+h2 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+}
+.logo h1 {
+  display: inline-block;
+}
+
+.logo h1::before {
+  content: "C";
+  background-color: #ff7a00;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: 300;
+  font-size: 17px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* ----- Button ----- */
+
+.btn {
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor:pointer;
+  width: 100%;
+}
+.btn-cart{
+  margin: 20px;
+  width: 25%;
+}
+.btn-group{
+  display: grid;
+  gap:20px;
+  height: 20%;
+}
+.btn-cash{
+  border:2px solid #ff7a00;
+  background-color: #fff;
+}
+.btn-cash i{
+  font-size: 1rem;
+  color: #ff7a00;
+}
+.cash-disabled{
+  border: 2px solid #f2f2f2;
+}
+.cash-disabled i{
+  font-size: 1rem;
+}
+
+/* ----- Header Section ----- */
+
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column: 1/-1;
+    border-bottom: 1px solid #E2E2E2;
+    justify-content: center;
+    align-content: center;
+    padding: 5px 20px;
+    height:60px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.collapse {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: #f9f9f9;
+  border: 1px solid #e2e2e2;
+  margin-left: 20px;
+}
+.collapse i {
+  color: #ff7a00;
+  font-size: 22px;
+}
+.search-box {
+  position: relative;
+  display: grid;
+  align-items: center;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  background-color: #f2f2f2;
+}
+.searchInput {
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  flex: 1;
+}
+.searchIcon {
+  color: #cccbcb;
+  cursor: pointer;
+  padding: 10px;
+}
+.account{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+.account img{
+    width: 50px;
+    height:50px;
+    margin-left: 20px;
+}
+
+/* ----- Sidebar Section ----- */
+.sidebar {
+  padding: 0 20px;
+}
+.sidebar-nav {
+  display: grid;
+}
+.card {
+  height: 100px;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+.card h2,.card i {
+  color: #fff;
+}
+.circle,
+.circle-ingredient {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ----- Article Section ----- */
+article {
+  background-color: #f2f2f2;
+}
+.circle-ingredient {
+  background: #ededed;
+  border: 0;
+}
+.active {
+  background: #ff7a00;
+  color: #fff;
+}
+.menu-card {
+  margin: 10px;
+  padding: 13px 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: grid;
+  gap: 20px;
+}
+.menu-card h1{
+  color:#ff7a00;
+}
+.menu-ingredient {
+  display: flex;
+  gap: 10px;
+}
+.ingredient {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.ingredient-card {
+  border: 1px solid #e2e2e2;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin: 5px;
+  font-size: 0.8rem;
+}
+.topping-card {
+  display: flex;
+  border: 1px solid #e2e2e2;
+  padding: 15px;
+  margin:5px;
+  justify-content: space-evenly;
+}
+.item {
+  display: block;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.item p {
+  font-size: 80%;
+}
+.cart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+}
+/* ----- Aside Section ----- */
+aside {
+  display: grid;
+  padding:0 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+thead th{
+    border-bottom: 2px solid #E2E2E2;
+}
+th,td{
+    padding:6px 0;
+}
+
+thead th:nth-child(1) {
+  width: 80%;
+}
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+th,
+tfoot td:nth-child(1),
+tbody td:nth-child(1) {
+  text-align: left;
+}
+
+th:nth-last-child(1),
+tbody td:nth-last-child(1),tfoot td:nth-last-child(1) {
+  text-align: right;
+}
+tbody tr:nth-last-child(1){
+  border-bottom: 3px solid #ff7a00;
+}
+.table-price{
+    color:#ff7a00;
+}
